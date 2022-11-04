@@ -8,9 +8,6 @@ import joblib
 
 df=pd.read_csv('forestfires.csv')
 df=df.drop(['X','Y','month','day'],axis=1)
-skjdchskdhcslkc
-shdckshdocs
-
 
 def preprocessing(df,task):
     df=df.copy()
