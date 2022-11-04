@@ -8,7 +8,7 @@ app = Flask(__name__)
 model=joblib.load('forestfiremodel.pkl')
 
 @app.route('/')
-def hello_world():
+def dash():
     return render_template("index.html")
 
 
