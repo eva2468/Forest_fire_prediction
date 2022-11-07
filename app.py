@@ -5,7 +5,7 @@ import joblib
 app = Flask(__name__)
 
 #model=joblib.load('forestfiremodel_1.pkl')
-model=joblib.load('forestfiremodel.pkl')
+model=joblib.load('C:/Users/91918/Documents/Forest_fire_prediction/Forest_fire_prediction/forestfiremodel_1.pkl')
 
 @app.route('/')
 def dash():
@@ -21,7 +21,7 @@ def predict():
     prediction=model.predict_proba(final)
     output='{0:.{1}f}'.format(prediction[0][1], 2)
 
-    if output>str(0.5):
+    if output>str(0.7):
         return render_template('index.html',pred='Your Forest is in Danger.\nProbability of fire occuring is {}'.format(output))
     else:
         return render_template('index.html',pred='Your Forest is safe.\n Probability of fire occuring is {}'.format(output))
