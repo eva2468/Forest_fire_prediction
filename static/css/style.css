@@ -12,8 +12,9 @@
 .icon-block .material-icons {
 	font-size: inherit;
 }
+
 .bg-logo{
-  background: url({{ url_for ('static', filename = '/static/forest_conserv.png') }});
+  background: url({{ url_for ('static', filename = 'C:\Users\91918\Documents\Forest_fire_prediction\Forest_fire_prediction\static\css\bg.jpg') }});
   background-size: 100% 100%;
   height: 300px;
   background-size: cover;
