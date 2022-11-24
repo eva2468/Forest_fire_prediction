@@ -2,13 +2,16 @@ from flask import Flask,request, url_for, redirect, render_template
 import numpy as np
 import joblib
 
-app = Flask(__name__)
+app = Flask(__name__,static_url_path='/static')
 
 #model=joblib.load('forestfiremodel_1.pkl')
 model=joblib.load('C:/Users/91918/Documents/Forest_fire_prediction/Forest_fire_prediction/forestfiremodel_1.pkl')
 
 @app.route('/')
 def dash():
+    return render_template("dash.html")
+@app.route('/predict')
+def dash_1  ():
     return render_template("index.html")
 
 
